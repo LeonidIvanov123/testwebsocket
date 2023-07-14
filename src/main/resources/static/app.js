@@ -44,12 +44,17 @@ function disconnect() {
 }
 
 function sendName() {
+    if($("#name").val().length < 4){
+        alert("Legth of Username more than 3 sumbols");
+    }
+    else{
     stompClient.publish({
         destination: "/app/hello",
         body: JSON.stringify({'name': $("#name").val()})
     });
     usernm = $("#name").val();
     console.log("Current username: " + usernm);
+    }
 }
 
 function sendMessage(){
