@@ -1,8 +1,5 @@
 package ru.leonid.testwebsocket.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 public class MyMessage {
     private long id;
     private String msg;
